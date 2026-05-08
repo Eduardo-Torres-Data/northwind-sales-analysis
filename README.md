@@ -23,3 +23,17 @@ This project demonstrates advanced SQL techniques for business intelligence usin
 ## Tools Used
 - **Database:** PostgreSQL / T-SQL
 - **Interface:** Visual Studio Code
+
+## Analysis Visualizations
+
+### 1. Sales Trends
+![Trend Analysis](images/Resul1.png)
+
+### 2. Category Performance
+![Category Analysis](images/Resul2.png)
+
+### 3. Customer Behavior
+![Customer Analysis](images/Resul3.png)
+
+### 4. SQL Execution Environment
+![VS Code Environment](images/Resul4.png)
