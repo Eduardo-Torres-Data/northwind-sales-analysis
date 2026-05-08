@@ -26,14 +26,14 @@ This project demonstrates advanced SQL techniques for business intelligence usin
 
 ## Analysis Visualizations
 
-### 1. Sales Trends
+### 1. Monthly Sales Trend & MoM Growth
 ![Trend Analysis](images/Result1.png)
 
-### 2. Category Performance
+### 2. Cumulative Sales by Category — 1997
 ![Category Analysis](images/Resul2.png)
 
-### 3. Customer Behavior
+### 3. Employee Sales Ranking & Revenue Share
 ![Customer Analysis](images/Result3.png)
 
-### 4. SQL Execution Environment
+### 4. Top 5 Customers — Order History & Buying Frequency
 ![VS Code Environment](images/Resul4.png)
