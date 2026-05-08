@@ -22,4 +22,4 @@ This project demonstrates advanced SQL techniques for business intelligence usin
 
 ## Tools Used
 - **Database:** PostgreSQL / T-SQL
-- **Interface:** DBeaver / Azure Data Studio
+- **Interface:** Visual Studio Code
