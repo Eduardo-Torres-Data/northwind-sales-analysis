@@ -1,39 +1,24 @@
-# Northwind Sales Analysis - SQL Portfolio
+# Northwind sales analysis
 
-## Project Overview
-This project demonstrates advanced SQL techniques for business intelligence using the classic **Northwind** database. The analysis focuses on key sales metrics, customer behavior, and employee performance to provide actionable insights for decision-making.
+Four PostgreSQL queries explore sales in the Northwind sample database. Revenue is calculated from order lines as unit price times quantity, after discount.
 
-## Key Features & SQL Techniques
-- **End-to-End Sales Trends:** Monthly revenue calculation with Month-over-Month (MoM) growth analysis.
-- **Performance Ranking:** Using `RANK()` and `DENSE_RANK()` to identify top-performing employees and categories.
-- **Customer Loyalty Analysis:** Implementation of `LAG()` window functions to calculate the frequency of orders and time gaps between purchases.
-- **Complex Aggregations:** Utilizing Common Table Expressions (CTEs) for clean, readable, and modular code.
+The analysis covers monthly revenue and growth, cumulative sales by category in 1997, employee sales ranking and revenue share, and order history for the five customers with the highest sales. The queries use CTEs to aggregate the data before applying window functions such as `LAG`, `RANK` and `SUM OVER`.
 
-## Business Questions Answered
-1. Is the business growing month-over-month?
-2. Which product categories drive the most revenue?
-3. Who are the top 5 customers and what is their purchasing pattern?
-4. Which employees are exceeding sales targets?
+## Run locally
 
-## How to Use
-1. Clone the repository: `git clone https://github.com/[Your-Username]/[Your-Repo-Name].git`
-2. Navigate to the `queries/` folder.
-3. Run `01_northwind_sales_analysis.sql` in any PostgreSQL environment (or SQL Server with minor syntax adjustments).
+Create a database and load [the PostgreSQL version of Northwind](https://github.com/pthom/northwind_psql/blob/master/northwind.sql). With that file saved as `northwind.sql` in your current directory, run the following.
 
-## Tools Used
-- **Database:** PostgreSQL / T-SQL
-- **Interface:** Visual Studio Code
+```sh
+createdb northwind_demo
+psql -X -v ON_ERROR_STOP=1 -d northwind_demo -f northwind.sql
+git clone https://github.com/Eduardo-Torres-Data/northwind-sales-analysis.git
+cd northwind-sales-analysis
+psql -X -v ON_ERROR_STOP=1 -d northwind_demo -f queries/01_northwind_sales_analysis.sql
+```
 
-## Analysis Visualizations
+## Sample results
 
-### 1. Monthly Sales Trend & MoM Growth
-![Trend Analysis](images/Result1.png)
-
-### 2. Cumulative Sales by Category — 1997
-![Category Analysis](images/Resul2.png)
-
-### 3. Employee Sales Ranking & Revenue Share
-![Customer Analysis](images/Result3.png)
-
-### 4. Top 5 Customers — Order History & Buying Frequency
-![VS Code Environment](images/Resul4.png)
+- [Monthly sales and month-over-month growth](images/Result1.png)
+- [Cumulative sales by category in 1997](images/Resul2.png)
+- [Employee sales ranking and revenue share](images/Result3.png)
+- [Order history for the top five customers](images/Resul4.png)
